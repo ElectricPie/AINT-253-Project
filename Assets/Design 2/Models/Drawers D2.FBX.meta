@@ -1,0 +1,193 @@
+fileFormatVersion: 2
+guid: 4b333c32d6cc12c4981b7ab36b7529ee
+timeCreated: 1509086027
+licenseType: Free
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: Drawer
+    100002: Drawer002
+    100004: Drawer003
+    100006: //RootNode
+    100008: Knob
+    100010: Knob Handle
+    100012: Knob Handle001
+    100014: Knob001
+    100016: Left Knob
+    100018: Left Knob Handle
+    100020: Left Knob Handle001
+    100022: Left Knob Handle002
+    100024: Left Knob001
+    100026: Left Knob002
+    100028: Right Knob
+    100030: Right Knob Handle
+    100032: Right Knob Handle001
+    100034: Right Knob Handle002
+    100036: Right Knob001
+    100038: Right Knob002
+    100040: SmallDrawer
+    100042: SmallDrawer001
+    400000: Drawer
+    400002: Drawer002
+    400004: Drawer003
+    400006: //RootNode
+    400008: Knob
+    400010: Knob Handle
+    400012: Knob Handle001
+    400014: Knob001
+    400016: Left Knob
+    400018: Left Knob Handle
+    400020: Left Knob Handle001
+    400022: Left Knob Handle002
+    400024: Left Knob001
+    400026: Left Knob002
+    400028: Right Knob
+    400030: Right Knob Handle
+    400032: Right Knob Handle001
+    400034: Right Knob Handle002
+    400036: Right Knob001
+    400038: Right Knob002
+    400040: SmallDrawer
+    400042: SmallDrawer001
+    2300000: Drawer
+    2300002: Drawer002
+    2300004: Drawer003
+    2300006: //RootNode
+    2300008: Knob
+    2300010: Knob Handle
+    2300012: Knob Handle001
+    2300014: Knob001
+    2300016: Left Knob
+    2300018: Left Knob Handle
+    2300020: Left Knob Handle001
+    2300022: Left Knob Handle002
+    2300024: Left Knob001
+    2300026: Left Knob002
+    2300028: Right Knob
+    2300030: Right Knob Handle
+    2300032: Right Knob Handle001
+    2300034: Right Knob Handle002
+    2300036: Right Knob001
+    2300038: Right Knob002
+    2300040: SmallDrawer
+    2300042: SmallDrawer001
+    3300000: Drawer
+    3300002: Drawer002
+    3300004: Drawer003
+    3300006: //RootNode
+    3300008: Knob
+    3300010: Knob Handle
+    3300012: Knob Handle001
+    3300014: Knob001
+    3300016: Left Knob
+    3300018: Left Knob Handle
+    3300020: Left Knob Handle001
+    3300022: Left Knob Handle002
+    3300024: Left Knob001
+    3300026: Left Knob002
+    3300028: Right Knob
+    3300030: Right Knob Handle
+    3300032: Right Knob Handle001
+    3300034: Right Knob Handle002
+    3300036: Right Knob001
+    3300038: Right Knob002
+    3300040: SmallDrawer
+    3300042: SmallDrawer001
+    4300000: Drawers
+    4300002: SmallDrawer
+    4300004: Knob Handle
+    4300006: Knob
+    4300008: SmallDrawer001
+    4300010: Knob001
+    4300012: Knob Handle001
+    4300014: Drawer003
+    4300016: Right Knob002
+    4300018: Right Knob Handle002
+    4300020: Left Knob002
+    4300022: Left Knob Handle002
+    4300024: Drawer002
+    4300026: Right Knob Handle001
+    4300028: Right Knob001
+    4300030: Left Knob Handle001
+    4300032: Left Knob001
+    4300034: Drawer
+    4300036: Right Knob
+    4300038: Right Knob Handle
+    4300040: Left Knob Handle
+    4300042: Left Knob
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
