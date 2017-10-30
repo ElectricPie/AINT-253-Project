@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
 
-    public DoorAnimation animCont;
+    private DoorAnimation animCont;
 
     public float sensitivity = 1;
 
@@ -18,6 +18,8 @@ public class PlayerController : MonoBehaviour {
 
     private Rigidbody m_rigidbody;
 
+    private Transform m_transform;
+
     private bool m_grounded;
     private bool m_holdingObj = false;
 
@@ -26,15 +28,18 @@ public class PlayerController : MonoBehaviour {
     // Use this for initialization
     void Start () {
         m_rigidbody = GetComponent<Rigidbody>();
+        m_transform = GetComponent<Transform>();
 	}
 
     // Update is called once per frame
     void Update() {
+        /*
         float xInput = Input.GetAxis("Horizontal");
         float zInput = Input.GetAxis("Vertical");
         float xMouseInput = Input.GetAxis("Mouse X") * sensitivity;
 
-        temp = (transform.right * xInput + transform.forward * zInput) * m_speed;
+        temp = ((transform.right * xInput) + (transform.forward * zInput)) * m_speed;
+        //m_transform.position += m_transform.forward * m_speed * zInput * Time.deltaTime;
 
         if (temp.x > 0.2)
             temp.x = 0.2f;
@@ -54,6 +59,7 @@ public class PlayerController : MonoBehaviour {
             temp.y += m_jump;
             m_grounded = false;
         }
+        */
 
         //Interacting
         if (Input.GetAxis("Interact") == 1 && m_interactDelay <= 0)
@@ -65,31 +71,57 @@ public class PlayerController : MonoBehaviour {
 
             if (Physics.Raycast(ray, out hit))
             {
-                print(hit.collider);
+               
+
+                print(hit.collider.tag);
 
                 if (hit.collider.tag == "Door")
                 {
-                    animCont.Transition();
+                    try
+                    {
+                        animCont = hit.collider.gameObject.transform.parent.GetComponent<DoorAnimation>();
+                        animCont.Transition();
+                    }
+                    catch
+                    {
+                        animCont = hit.collider.gameObject.transform.parent.parent.GetComponent<DoorAnimation>();
+                        animCont.Transition();
+                    }
+                    m_interactDelay = 5;
+                }
+                else if (hit.collider.tag == "Locked Door")
+                {
+                    try
+                    {
+                        animCont = hit.collider.gameObject.transform.parent.GetComponent<DoorAnimation>();
+                        animCont.Denied();
+                    }
+                    catch
+                    {
+                        animCont = hit.collider.gameObject.transform.parent.parent.GetComponent<DoorAnimation>();
+                        animCont.Denied();
+                    }
+                    m_interactDelay = 5;
                 }
             }
 
-            m_interactDelay = 1;
+            
         }
-
-
-        m_rigidbody.velocity += temp;
 
         if (m_interactDelay > 0)
         {
             m_interactDelay -= Time.deltaTime * 1;
         }
 
+        /*
+        m_rigidbody.velocity += temp;
         transform.Rotate(0, xMouseInput, 0);
+        */
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        m_grounded = true;
+        //m_grounded = true;
     }
 }
 

@@ -4,14 +4,12 @@ using UnityEngine;
 
 public class DoorAnimation : MonoBehaviour {
 
-    [SerializeField]
-    private AudioClip m_open_s;
 
-    [SerializeField]
-    private AudioClip m_close_s;
-
-    [SerializeField]
-    private AudioClip m_keypad_s;
+    public AudioClip open_s;
+    public AudioClip close_s;
+    public AudioClip keypad_s;
+    public AudioClip locked_s;
+    public AudioClip unlocked_s;
 
     private Animator m_anim;
     private AudioSource m_audio;
@@ -56,32 +54,53 @@ public class DoorAnimation : MonoBehaviour {
         */
     }
 
-    private void Open()
+    private void Close()
     {
         m_open = false;
         m_anim.SetBool("Open", false);
-        m_audio.PlayOneShot(m_open_s, 1);
+        m_audio.PlayOneShot(open_s, 1);
         m_active = false;
     }
 
-    private void Close()
+    private void Open()
     {
         m_open = true;
         m_anim.SetBool("Open", true);
-        m_audio.PlayOneShot(m_close_s, 1);
+        
+        m_audio.PlayOneShot(close_s, 1);
         m_active = false;
+
+        Invoke("Close", 5);
+    }
+
+    public void Locked()
+    {
+        m_audio.PlayOneShot(locked_s, 1);
     }
 
     public void Transition()
     {
-        if (m_open)
+        if (!m_open)
         {
-            Invoke("Open", 1);
+            m_audio.PlayOneShot(keypad_s, 1);
+            Invoke("Accepted", 1.5f);
         }
-        else
+        /*else
         {
-            m_audio.PlayOneShot(m_keypad_s, 1);
             Invoke("Close", 1.7f);
         }
+        */
+    }
+
+    public void Accepted()
+    {
+        m_audio.PlayOneShot(unlocked_s, 1);
+        Invoke("Open", 0.5f);
+    }
+
+    public void Denied()
+    {
+        m_audio.PlayOneShot(keypad_s, 1);
+        Invoke("Locked", 1.5f);
     }
 }
